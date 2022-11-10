@@ -1,0 +1,31 @@
+.Card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.CardContent {
+  display: flex;
+  flex-direction: column;
+}
+.iconContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.iconGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+.rightIcons {
+  display: flex;
+  gap: 5px;
+}
+.greyed {
+  background-color: rgb(236, 234, 234);
+}

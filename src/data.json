@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Note 1",
+    "dateCreated": "2022-11-08",
+    "content": "my first note"
+  },
+  {
+    "title": "Note 2",
+    "dateCreated": "2022-11-08",
+    "content": "my second note"
+  }
+]

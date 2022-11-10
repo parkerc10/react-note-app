@@ -1,0 +1,15 @@
+.Card {
+  margin-bottom: 15px;
+  cursor: pointer;
+  min-height: 86px;
+  opacity: 0.75;
+}
+.Card:last-child {
+  margin-bottom: 0px;
+}
+.Card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.Card:hover * {
+  background-color: teal;
+}

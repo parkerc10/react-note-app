@@ -1,0 +1,12 @@
+.container {
+  background: url('./assets/backgroundImage.jpg') no-repeat;
+  /* Keep the inherited background full size. */
+  background-attachment: fixed; 
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex: 1;
+  flex-basis: 40%;
+  padding: 10px;
+  justify-content: center;
+}

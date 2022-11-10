@@ -1,0 +1,20 @@
+.container {
+  /* background-color: red; */
+  display: flex;
+  flex: 1;
+  flex-basis: 60%;
+  /* height: 100vh; */
+  padding: 10px;
+  flex-direction: column;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  max-width: 75%;
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+.Button {
+  width: fit-content;
+  margin-bottom: 10px;
+}
