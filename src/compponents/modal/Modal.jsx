@@ -12,9 +12,14 @@ const Modal = ({setShowModal}) => {
 
   const addNote = () => {
     if (title !== "" && content !== "") {
+      let date = new Date();
+      let day = date.getDate();
+      let month = date.getMonth() === 12 ? 1 : date.getMonth() + 1;
+      let year = date.getFullYear();
+
       setNoteList([...noteList, {  
         "title": title,
-        "dateCreated": "2022-11-08",
+        "dateCreated": `${month}-${day}-${year}`,
         "content": content
       }]);
       setShowModal(false);
