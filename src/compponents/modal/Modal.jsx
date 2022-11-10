@@ -34,7 +34,7 @@ const Modal = ({setShowModal}) => {
       <div className={styles.modal}>
         <div className={styles.modalContent}>
           {/* <p className={styles.modalText}>Title</p> */}
-          <CloseIcon sx={{ cursor: "pointer", marginRight: 0, marginLeft: 'auto', marginBottom: '5px' }} onClick={closeModal}/>
+          <CloseIcon sx={{ cursor: "pointer", top:0, position: 'absolute', right:0, }} onClick={closeModal}/>
           <TextField 
             id='outlined-basic' 
             label='Title'

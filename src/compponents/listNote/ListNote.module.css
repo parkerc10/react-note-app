@@ -12,4 +12,5 @@
 }
 .Card:hover * {
   background-color: teal;
+  color: white;
 }
