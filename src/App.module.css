@@ -7,7 +7,6 @@
 
 body {
   background: url('./assets/backgroundImage.jpg') no-repeat;
-  /* Keep the inherited background full size. */
   background-attachment: fixed; 
   background-size: cover;
   height: 100vh;

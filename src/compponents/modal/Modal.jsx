@@ -5,6 +5,7 @@ import styles from './Modal.module.css';
 import { Button, TextField, TextareaAutosize } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
+//This component displays a modal to add a note
 const Modal = ({setShowModal}) => {
   const [noteList, setNoteList] = useRecoilState(notesState);
   const [title, setTitle] = useState('');
@@ -38,7 +39,6 @@ const Modal = ({setShowModal}) => {
     <>
       <div className={styles.modal}>
         <div className={styles.modalContent}>
-          {/* <p className={styles.modalText}>Title</p> */}
           <CloseIcon sx={{ cursor: "pointer", top:0, position: 'absolute', right:0, }} onClick={closeModal}/>
           <TextField 
             id='outlined-basic' 
@@ -48,13 +48,9 @@ const Modal = ({setShowModal}) => {
             fullWidth
           />
           <br />
-          {/* <input className={styles.modalTitle} value={title} onChange={e => setTitle(e.target.value)}/>
-          <p className={styles.modalText}>Content</p> */}
-          {/* <textarea rows={20} cols={100} className={styles.modalBody} value={content} onChange={e => setContent(e.target.value)}></textarea> */}
           <TextField
             id="outlined-textarea"
             label="Insert Your Note Here"
-            placeholder="Placeholder"
             value={content}
             onChange={e => setContent(e.target.value)}
             multiline
@@ -62,7 +58,6 @@ const Modal = ({setShowModal}) => {
             fullWidth
           />
           <br />
-          {/* <button className={styles.modalButton} onClick={addNote}>Ok</button> */}
           <Button variant='contained' onClick={addNote}>Add Note</Button>
         </div>
       </div>

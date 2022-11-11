@@ -2,15 +2,25 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  overflow-y: scroll !important;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.Card::-webkit-scrollbar {
+  display: none;
 }
 .CardContent {
   display: flex;
   flex-direction: column;
 }
+.closeButton span {
+  margin: 0 !important;
+}
 .iconContainer {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  flex-wrap: wrap;
 }
 .iconGroup {
   display: flex;
