@@ -5,3 +5,5 @@ Third Party Libraries Utilized:
   1. Recoil JS for global state management
   2. recoil-persist for persisting data
   3. Material UI for custom components
+
+Link to site: https://parker-notes.netlify.app
