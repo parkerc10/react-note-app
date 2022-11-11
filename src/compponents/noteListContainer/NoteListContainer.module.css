@@ -1,9 +1,7 @@
 .container {
-  /* background-color: red; */
   display: flex;
   flex: 1;
   flex-basis: 60%;
-  /* height: 100vh; */
   padding: 10px;
   flex-direction: column;
   overflow-y: scroll;
@@ -15,6 +13,6 @@
   display: none;
 }
 .Button {
-  width: fit-content;
-  margin-bottom: 10px;
+  width: 50%;
+  margin-bottom: 10px !important;
 }

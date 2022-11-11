@@ -9,7 +9,8 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import CloseIcon from '@mui/icons-material/Close';
 import DoNotDisturbIcon from '@mui/icons-material/DoNotDisturb';
 
-const DisplayedNote = ({note}) => {
+//This component displays a selected note from the list to perform CRUD operations
+const DisplayedNote = () => {
   const [displayNote, setDisplayNote] = useRecoilState(displayNoteState);
   const [noteList, setNoteList] = useRecoilState(notesState);
   const [isEditable, setIsEditable] = useState(false);
@@ -23,9 +24,14 @@ const DisplayedNote = ({note}) => {
   }, [displayNote])
 
   const saveNote = () => {
+    let date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth() === 12 ? 1 : date.getMonth() + 1;
+    let year = date.getFullYear();
+
     let newListArr = noteList.map(note => {
       if (note.title === displayNote.title && note.content === displayNote.content) {
-        return {...note, title: title, content: content}
+        return {dateCreated: `${month}-${day}-${year}`,title: title, content: content}
       }
       return note;
     });
@@ -57,9 +63,9 @@ const DisplayedNote = ({note}) => {
           <Button variant="contained" color='error' endIcon={<DeleteIcon />} onClick={deleteNote}>Delete</Button>
           <div className={styles.rightIcons}>
             {!isEditable && <Button variant="contained" endIcon={<EditIcon />} onClick={() => setIsEditable(!isEditable)}>Edit</Button>}
-            {isEditable && <Button variant="contained" endIcon={<DoNotDisturbIcon />} onClick={stopEditing}>Stop Editing</Button>}
             {isEditable && <Button variant="contained" color="success" endIcon={<CheckIcon />} onClick={saveNote}>Save</Button>}
-            <Button variant="contained" endIcon={<CloseIcon />} onClick={closeNote}>Close</Button>
+            {isEditable && <Button variant="contained" endIcon={<DoNotDisturbIcon />} onClick={stopEditing}>Cancel</Button>}
+            <Button variant="outlined" className={styles.closeButton} endIcon={<CloseIcon />} onClick={closeNote}></Button>
           </div>
         </div>
         <CardContent className={styles.CardContent}>

@@ -10,7 +10,14 @@
 .Card:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.Card:hover * {
+.Card:hover {
   background-color: teal;
   color: white;
+}
+.CardContent {
+  display: flex;
+  justify-content: space-between;
+}
+.deleteButton span {
+  margin: 0 !important;
 }

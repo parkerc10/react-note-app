@@ -1,9 +1,7 @@
-import { useRecoilState } from "recoil";
-import { displayNoteState } from "../../data/atoms";
 import DisplayedNote from "../displayedNote/DisplayedNote";
 import styles from './NoteContainer.module.css';
-import { Card, CardContent } from "@mui/material";
 
+//This component wraps around the displayed note
 const NoteContainer = () => {
 
   return (
