@@ -12,20 +12,17 @@ const Modal = ({setShowModal}) => {
   const [content, setContent] = useState('');
 
   const addNote = () => {
-    if (title !== "" && content !== "") {
-      let date = new Date();
-      let day = date.getDate();
-      let month = date.getMonth() === 12 ? 1 : date.getMonth() + 1;
-      let year = date.getFullYear();
+    let date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth() === 12 ? 1 : date.getMonth() + 1;
+    let year = date.getFullYear();
 
-      setNoteList([...noteList, {  
-        "title": title,
-        "dateCreated": `${month}-${day}-${year}`,
-        "content": content
-      }]);
-      setShowModal(false);
-
-    }
+    setNoteList([...noteList, {  
+      "title": title !== '' ? title : 'Untitled',
+      "dateCreated": `${month}-${day}-${year}`,
+      "content": content
+    }]);
+    setShowModal(false);
   }
 
   const closeModal = () => {
